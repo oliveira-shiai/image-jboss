@@ -7,4 +7,4 @@ COPY datasource.sh /opt/eap/
 COPY postgresql-42.2.5.jar /opt/eap/
 COPY Lab6A.war /opt/eap/standalone/deployments/
 
-ENTRYPOINT /bin/sh /opt/eap/datasource.sh
+RUN /bin/sh /opt/eap/datasource.sh
