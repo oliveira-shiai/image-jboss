@@ -2,8 +2,6 @@
 
 FROM registry.redhat.io/jboss-eap-7/eap74-openjdk8-openshift-rhel7
 
-COPY Lab6A.war /opt/eap/standalone/deployments/
-
 COPY postgresql-42.2.5.jar /opt/eap/
 
 RUN /opt/eap/bin/jboss-cli.sh -c --command="module add --name=org.postgres --resources=/opt/eap/postgresql-42.2.5.jar --dependencies=javax.api,javax.transaction.api"
